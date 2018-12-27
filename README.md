@@ -1,8 +1,8 @@
-## Welcome to Build A Meal 3.0, built using the mean stack.
+## Welcome to Build A Meal 2.0, built using the mean stack.
 
 ### Installation using yarn(for reference)
 ``` 
-cp .env.example .env (NOT env-example, big ol' oof)
+cp .env.example .env
 yarn install
 yarn build
 yarn start (for development)
