@@ -25,24 +25,21 @@ header {
       font-size: 30px;
       align: middle;
       text-decoration: none;
+      font-weight: bold;
     }
     .visit-team-page-link {
       color: black;
       font-family: Dosis, sans-serif;
-      font-size: 15px;
+      font-size: 17px;
       text-decoration: none;
-      //align: middle
-      text-align: left;
-      vertical-align: middle;
-      //font-weight: initial;
-      //letter-spacing: -1px;
-      //line-height: 1;
-      //text-align: center;
-      //padding: 15px;
-      //&.side {
-      //  padding: 0 14px;
-      //}
     }
+
+  .email-link {
+    color: black;
+    font-family: Dosis, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+  }
 
     .mat-toolbar {
       background: white;
@@ -57,4 +54,8 @@ header {
     a {
       cursor: pointer;
     }
+  div {
+    display: flex; /* make element size relative to content */
+    align-items: center; /* vertical alignment of contents */
+  }
   }
