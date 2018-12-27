@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    .logo-main {
+      background-image: url('../../assets/logo.png');
+      width: 40px;
+      height: 40px;
+      align: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  .logo-small {
+    background-image: url('../../assets/logo.png');
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+    .title {
+      color: black;
+      font-family: Dosis, sans-serif;
+      font-size: 30px;
+      align: middle;
+      text-decoration: none;
+    }
+    .visit-team-page-link {
+      color: black;
+      font-family: Dosis, sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      //align: middle
+      text-align: left;
+      vertical-align: middle;
+      //font-weight: initial;
+      //letter-spacing: -1px;
+      //line-height: 1;
+      //text-align: center;
+      //padding: 15px;
+      //&.side {
+      //  padding: 0 14px;
+      //}
+    }
+
+    .mat-toolbar {
+      background: white;
+      border: 0.75vh solid #b3cccc;
+      height:10vh;
+
+    }
+    .mat-icon {
+      vertical-align: middle;
+      //margin: 0 5px;
+    }
+    a {
+      cursor: pointer;
+    }
+  }

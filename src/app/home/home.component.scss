@@ -1,0 +1,156 @@
+body {
+  .example-spacer {
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .leftSide {
+    background-color: #F4F7FA  ;
+    text-align: left;
+    width: 30%;
+    overflow-y: scroll;
+    height:90vh;
+  }
+
+  .findRecipes {
+    background-color: #F6C47F;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    width:90%;
+    margin: 10px 10px;
+    font-family: "Dosis", cursive, sans-serif;
+  }
+
+  /* ---------the ingredients list--------*/
+  fieldset.group  {
+    margin: 0px;
+    margin-top:7px;
+    padding: 0;
+    margin-bottom: 0px;
+    border-color: #E8E9E3;
+    border-style: solid;
+  }
+  fieldset.group legend {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 100%;
+    color: black;
+    text-align: center;
+  }
+  ul.checkbox  {
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+  }
+  ul li{
+    font-size:14px;
+    display:inline-block;
+  }
+  ul:hover li{
+    cursor: pointer;
+  }
+  .checkbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .checkbox li {
+    margin: 0 3px 0 3px;
+    flex-basis: calc(50% - 6px);
+  }
+  .ingredientList {
+    background-color: white;
+    width: 70%;
+    border: 2px solid #ffd999;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 0px;
+    margin: auto;
+    margin-top:5px;
+  }
+
+  .removeButton {
+    padding: "0px";
+    color: white;
+    background-color: #C8C8C8;
+    border: none;
+    font-family: "Dosis", cursive, sans-serif;
+    margin : "5px";
+    display:block;
+    margin: 0 auto;
+  }
+  /* ---------search bar--------*/
+  input {
+    margin: 10px;
+    font-family: "Dosis", cursive, sans-serif;
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 8%;
+  }
+  input[type=text] {
+    background-color: white;
+    width: 100%;
+    margin-right: 5%
+  }
+  .add {
+    font-family: "Dosis", cursive, sans-serif;
+    background-color: #a7dba2;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 16px;
+    width:25%;
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  .help {
+    font-family: "Dosis", cursive, sans-serif;
+    background-color: #C0C0C0;
+    color: white;
+    margin: 10px;
+    margin-left: 2px;
+    margin-right: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    padding-right: 6px;
+    text-align: center;
+    height:29px;
+    font-size: 25px;
+  }
+  .tooltip {
+    position: relative;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 14px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+}

@@ -1,0 +1,33 @@
+<!--<p>-->
+  <!--I am the home component!-->
+<!--</p>-->
+
+<body>
+
+<div class ="leftSide">
+    <button class = "findRecipes" onclick = "display()"><span>Find me recipes! </span></button>
+
+    <!--Ingredients List -->
+    <div class="ingredientList" style= "text-align:center">
+        <fieldset class="group">
+            <legend>Ingredients List</legend>
+            <ul class="checkbox" id="ingredientCheckbox">
+            </ul>
+            <div style="text-align:center; font-size:14px; padding: 10px;">
+                <font color = "grey"><b> &#9432; Select items/filters to remove OR &nbsp &nbsp</b></font>
+                <button class = "removeButton" onclick="removeAllIngredients()"> Clear All </button>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Search bar -->
+    <button class="add" id = "add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
+    <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below and click to add to the ingredients list, or search for a total of 10 ingredients. </span></span></span>
+    <div style="overflow: hidden; padding-right: .5em;">
+        <input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">
+    </div>
+</div>
+
+
+
+</body>
