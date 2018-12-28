@@ -2,8 +2,8 @@
   <!--I am the home component!-->
 <!--</p>-->
 
+<!--TODO: Fix all functions to work with angular instead of interacting with the old js file-->
 <body>
-
 <div class ="leftSide">
     <button class = "findRecipes" onclick = "display()"><span>Find me recipes! </span></button>
 
@@ -14,7 +14,7 @@
             <ul class="checkbox" id="ingredientCheckbox">
             </ul>
             <div style="text-align:center; font-size:14px; padding: 10px;">
-                <font color = "grey"><b> &#9432; Select items/filters to remove OR &nbsp &nbsp</b></font>
+                <font color = "grey"><b> &#9432; Select items/filters to remove OR </b></font>
                 <button class = "removeButton" onclick="removeAllIngredients()"> Clear All </button>
             </div>
         </fieldset>
@@ -27,7 +27,6 @@
         <input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">
     </div>
 </div>
-
 
 
 </body>
