@@ -14,10 +14,20 @@
             <ul class="checkbox" id="ingredientCheckbox">
             </ul>
             <div style="text-align:center; font-size:14px; padding: 10px;">
-                <span style="color: grey; "><b> &#9432; Select items/filters to remove OR </b></span>
+                <span style="color: grey; "><b> &#9432; Select items to remove OR </b></span>
                 <button class = "removeButton" onclick="removeAllIngredients()"> Clear All </button>
             </div>
         </fieldset>
+    </div>
+
+    <!--Filters List-->
+    <div class = "filtersOn">
+        <div class = "filtersText">
+            <b>Filters Applied:</b>
+            <ul class = "checkbox" id = "filterSelection">
+            </ul>
+            <button class = "removeButton" onclick="removeAllFilters()"> Clear All </button>
+        </div>
     </div>
 
     <!-- Search bar -->
