@@ -31,10 +31,11 @@
     </div>
 
     <!-- Search bar -->
-    <button class="add" id = "add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
+    <button class="add" id = "add" (click)="addToCheckBox(myInput.value)"  style="float: right" ><span> Add </span></button>
     <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below and click to add to the ingredients list, or search for a total of 10 ingredients. </span></span></span>
     <div style="overflow: hidden; padding-right: .5em;">
-        <input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">
+        <!--<input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">-->
+        <input #myInput (keyup.enter)="addToCheckBox(myInput.value)" type="text" spellcheck="true" placeholder="Search" style="width: 97%">
     </div>
 </div>
 

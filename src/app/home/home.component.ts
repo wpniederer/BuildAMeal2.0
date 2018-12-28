@@ -7,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+    private ingredientList = [];
+    private myInput: '';
 
   constructor() { }
+
 
   ngOnInit() {
   }
 
+    addToCheckBox(input: string) {
+        // if (!/^[a-zA-Z\s-]*$/.test(input) || input === '') {
+        //
+        // }
+        console.log('Ingredient: ' + input);
+    }
+
+    processSearchInput(ingredient: string) {
+    }
 }
+
