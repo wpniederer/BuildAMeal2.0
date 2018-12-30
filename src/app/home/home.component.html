@@ -31,13 +31,34 @@
     </div>
 
     <!-- Search bar -->
-    <button class="add" id = "add" (click)="addToCheckBox(myInput.value)"  style="float: right" ><span> Add </span></button>
-    <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below and click to add to the ingredients list, or search for a total of 10 ingredients. </span></span></span>
-    <div style="overflow: hidden; padding-right: .5em;">
-        <!--<input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">-->
-        <input #myInput (keyup.enter)="addToCheckBox(myInput.value)" type="text" spellcheck="true" placeholder="Search" style="width: 97%">
-    </div>
+    <form [formGroup]="ingredientForm" #formDir="ngForm">
+
+        <div class="form-group">
+            <button class="add" id = "add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
+            <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply
+                choose ingredients from the preloaded lists below and click to add to the ingredients list,
+                or search for a total of 10 ingredients. </span></span></span>
+
+            <div style="overflow: hidden; padding-right: .5em;">
+                <input id="searchBar" placeholder="Search" formControlName="ingredientName" class="form-control"
+                       spellcheck="true" style="width: 97%">
+            </div>
+
+            <div *ngIf="ingredientName.invalid && (ingredientName.dirty || ingredientName.touched)" class="alert alert-danger">
+                <div *ngIf="ingredientName.errors.required">
+                    An ingredient is required.
+                </div>
+                <div *ngIf="ingredientName.errors.minlength">
+                    Ingredient name must be at least 3 characters long.
+                </div>
+                <div *ngIf="ingredientName.errors.pattern">
+                    Not a valid ingredient.
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
 </div>
-
-
 </body>
