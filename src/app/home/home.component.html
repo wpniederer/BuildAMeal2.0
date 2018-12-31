@@ -38,13 +38,13 @@
 
         <div class="form-group">
 
-            <button class="add" id = "add" style="float: right" [disabled]="ingredientForm.invalid" ><span> Add </span></button>
+            <button class="add" id = "add" style="float: right" [disabled]="!ingredientForm.valid" (click)="addToCheckBox(myInput.value)"><span> Add </span></button>
             <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply
                 choose ingredients from the preloaded lists below and click to add to the ingredients list,
                 or search for a total of 10 ingredients. </span></span></span>
 
             <div style="overflow: hidden; padding-right: 2.2em;">
-                <input id="searchBar" placeholder="Search" formControlName="ingredientName" class="form-control"
+                <input #myInput id="searchBar" placeholder="Search" formControlName="ingredientName" class="form-control"
                        spellcheck="true" style="width: 97%">
             </div>
 
@@ -64,10 +64,6 @@
 
     </form>
 
-    <div class="submitted-message" *ngIf="formDir.submitted">
-        <p>You've submitted your ingredient, {{ ingredientForm.value.ingredientName }}!</p>
-        <!--<button (click)="formDir.resetForm({})">Add new hero</button>-->
-    </div>
 
 </div>
 </body>
