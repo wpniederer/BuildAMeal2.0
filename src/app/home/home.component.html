@@ -44,7 +44,7 @@
 
             <div style="overflow: hidden; padding-right: 2.2em;">
                 <input #myInput id="searchBar" placeholder="Search" formControlName="ingredientName" class="form-control"
-                       spellcheck="true" style="width: 97%">
+                       spellcheck="true" type=text style="width: 97%">
             </div>
 
             <div *ngIf="ingredientName.invalid && (ingredientName.dirty || ingredientName.touched)" style="text-align: center">
@@ -62,9 +62,11 @@
         </div>
     </form>
 
+    <!--filtering selection-->
+    <!--proteins selection-->
     <mat-expansion-panel class="accordion" [hideToggle]="true">
 
-        <mat-expansion-panel-header style=background:#D1DEB3 [collapsedHeight]="'50px'" [expandedHeight]="'50px'">
+        <mat-expansion-panel-header style=background:#D1DEB3 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
             <mat-panel-title>
                 Protein
             </mat-panel-title>
@@ -83,9 +85,258 @@
         <button class="foodOptions" id = "clam" value="clam" onclick="addIngredient(this.id)">clam</button>
         <button class="foodOptions" id = "lobster" value="lobster" onclick="addIngredient(this.id)">lobster</button>
         <button class="foodOptions" id = "crab" value="crab" onclick="addIngredient(this.id)">crab</button>
+    </mat-expansion-panel>
+
+    <!--vegetable selection-->
+     <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#D2E6CC [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Vegetables
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/vegetable.png" height="18" width="18" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+         <button class="foodOptions" id = "potato" value="potato" onclick="addIngredient(this.id)">potato</button>
+         <button class="foodOptions" id = "tomato" value="tomato" onclick="addIngredient(this.id)">tomato</button>
+         <button class="foodOptions" id = "onion" value="onion" onclick="addIngredient(this.id)">onion</button>
+         <button class="foodOptions" id = "carrot" value="carrot" onclick="addIngredient(this.id)">carrot</button>
+         <button class="foodOptions" id = "lettuce" value="lettuce" onclick="addIngredient(this.id)">lettuce</button>
+         <button class="foodOptions" id = "broccoli" value="broccoli" onclick="addIngredient(this.id)">broccoli</button>
+         <button class="foodOptions" id = "green bell pepper" value="green bell pepper" onclick="addIngredient(this.id)">green bell pepper</button>
+         <button class="foodOptions" id = "red bell pepper" value="red bell pepper" onclick="addIngredient(this.id)">red bell pepper</button>
+         <button class="foodOptions" id = "yellow bell pepper" value="yellow bell pepper" onclick="addIngredient(this.id)">yellow bell pepper</button>
+         <button class="foodOptions" id = "celery" value="celery" onclick="addIngredient(this.id)">celery</button>
+         <button class="foodOptions" id = "cucumber" value="cucumber" onclick="addIngredient(this.id)">cucumber</button>
+         <button class="foodOptions" id = "corn" value="corn" onclick="addIngredient(this.id)">corn</button>
+         <button class="foodOptions" id = "garlic" value="garlic" onclick="addIngredient(this.id)">garlic</button>
+         <button class="foodOptions" id = "spinach" value="spinach" onclick="addIngredient(this.id)">spinach</button>
+         <button class="foodOptions" id = "mushroom" value="mushroom" onclick="addIngredient(this.id)">mushroom</button>
+         <button class="foodOptions" id = "zucchini" value="zucchini" onclick="addIngredient(this.id)">zucchini</button>
+         <button class="foodOptions" id = "kale" value="kale" onclick="addIngredient(this.id)">kale</button>
+         <button class="foodOptions" id = "brussel" value="brussel sprouts" onclick="addIngredient(this.id)">brussel sprouts</button>
 
     </mat-expansion-panel>
 
+
+    <!--Fruits-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#D7E7E2 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Fruits
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/fruit.png" height="22" width="18" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "banana" value="banana" onclick="addIngredient(this.id)">banana</button>
+        <button class="foodOptions" id = "apple" value="apple" onclick="addIngredient(this.id)">apple</button>
+        <button class="foodOptions" id = "grape" value="grapes" onclick="addIngredient(this.id)">grapes</button>
+        <button class="foodOptions" id = "strawberry" value="strawberry" onclick="addIngredient(this.id)">strawberry</button>
+        <button class="foodOptions" id = "orange" value="orange" onclick="addIngredient(this.id)">orange</button>
+        <button class="foodOptions" id = "watermelon" value="watermelon" onclick="addIngredient(this.id)">watermelon</button>
+        <button class="foodOptions" id = "blueberry" value="blueberry" onclick="addIngredient(this.id)">blueberry</button>
+        <button class="foodOptions" id = "peach" value="peach" onclick="addIngredient(this.id)">peach</button>
+        <button class="foodOptions" id = "cantaloupe" value="cantaloupe" onclick="addIngredient(this.id)">cantaloupe</button>
+        <button class="foodOptions" id = "avocado" value="avocado" onclick="addIngredient(this.id)">avocado</button>
+        <button class="foodOptions" id = "pineapple" value="pineapple" onclick="addIngredient(this.id)">pineapple</button>
+        <button class="foodOptions" id = "cherry" value="cherry" onclick="addIngredient(this.id)">cherry</button>
+
+    </mat-expansion-panel>
+
+    <!--Dairy-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#d1e0e0 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Dairy
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/dairy.png" height="20" width="20" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "butter" value="butter" onclick="addIngredient(this.id)">butter</button>
+        <button class="foodOptions" id = "evaporated milk" value="evaporated milk" onclick="addIngredient(this.id)">evaporated milk</button>
+        <button class="foodOptions" id = "milk" value="milk" onclick="addIngredient(this.id)">milk</button>
+        <button class="foodOptions" id = "sour cream" value="sour cream" onclick="addIngredient(this.id)">sour cream</button>
+        <button class="foodOptions" id = "feta" value="feta" onclick="addIngredient(this.id)">feta</button>
+        <button class="foodOptions" id = "cheddar cheese" value="cheddar cheese" onclick="addIngredient(this.id)">cheddar cheese</button>
+        <button class="foodOptions" id = "cream cheese" value="cream cheese" onclick="addIngredient(this.id)">cream cheese</button>
+
+    </mat-expansion-panel>
+
+
+    <!--Spices and Herbs-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#d6e2f1 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Spices and Herbs
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/spices.png" height="18" width="18" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "allspice" value="allspice" onclick="addIngredient(this.id)">allspice</button>
+        <button class="foodOptions" id = "bayleaf" value="bay leaf" onclick="addIngredient(this.id)">bay leaf</button>
+        <button class="foodOptions" id = "basil" value="basil" onclick="addIngredient(this.id)">basil</button>
+        <button class="foodOptions" id = "cardamom" value="cardamom" onclick="addIngredient(this.id)">cardamom</button>
+        <button class="foodOptions" id = "cayenne" value="cayenne pepper" onclick="addIngredient(this.id)">cayenne pepper</button>
+        <button class="foodOptions" id = "cilantro" value="cilantro" onclick="addIngredient(this.id)">cilantro</button>
+        <button class="foodOptions" id = "cinnamon" value="cinnamon" onclick="addIngredient(this.id)">cinnamon</button>
+        <button class="foodOptions" id = "cloves" value="cloves" onclick="addIngredient(this.id)">cloves</button>
+        <button class="foodOptions" id = "coriander" value="coriander seed" onclick="addIngredient(this.id)">coriander seed</button>
+        <button class="foodOptions" id = "cumin" value="cumin" onclick="addIngredient(this.id)">cumin</button>
+        <button class="foodOptions" id = "fennel" value="fennel seed" onclick="addIngredient(this.id)">fennel seed</button>
+        <button class="foodOptions" id = "mint" value="mint" onclick="addIngredient(this.id)">mint</button>
+        <button class="foodOptions" id = "nutmeg" value="nutmeg" onclick="addIngredient(this.id)">nutmeg</button>
+        <button class="foodOptions" id = "oregano" value="oregano" onclick="addIngredient(this.id)">oregano</button>
+        <button class="foodOptions" id = "rosemary" value="rosemary" onclick="addIngredient(this.id)">rosemary</button>
+        <button class="foodOptions" id = "sage" value="sage" onclick="addIngredient(this.id)">sage</button>
+        <button class="foodOptions" id = "paprika" value="paprika" onclick="addIngredient(this.id)">paprika</button>
+        <button class="foodOptions" id = "tumeric" value="tumeric" onclick="addIngredient(this.id)">tumeric</button>
+        <button class="foodOptions" id = "thyme" value="thyme" onclick="addIngredient(this.id)">thyme</button>
+    </mat-expansion-panel>
+
+    <div> &nbsp; </div>
+
+    <!--Allergies-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#ddd2e0 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Allergies
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/allergies.png" height="18" width="18" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "dairy" value="Dairy-Free" onclick="addGenericFilter(this.id)">dairy</button>
+        <button class="foodOptions" id = "egg" value="Egg-Free" onclick="addGenericFilter(this.id)">egg</button>
+        <button class="foodOptions" id = "gluten" value="Gluten-Free" onclick="addGenericFilter(this.id)">gluten</button>
+        <button class="foodOptions" id = "peanut" value="Peanut-Free" onclick="addGenericFilter(this.id)">peanut</button>
+        <button class="foodOptions" id = "seafood" value="Seafood-Free" onclick="addGenericFilter(this.id)">seafood</button>
+        <button class="foodOptions" id = "sesame" value="Sesame-Free" onclick="addGenericFilter(this.id)">sesame</button>
+        <button class="foodOptions" id = "soy" value="Soy-Free" onclick="addGenericFilter(this.id)">soy</button>
+        <button class="foodOptions" id = "sulfite" value="Sulfite-Free" onclick="addGenericFilter(this.id)">sulfite</button>
+        <button class="foodOptions" id = "treenut" value="Tree Nut-Free" onclick="addGenericFilter(this.id)">tree nut</button>
+        <button class="foodOptions" id = "wheat" value="Wheat-Free" onclick="addGenericFilter(this.id)">wheat</button>
+    </mat-expansion-panel>
+
+    <!--Dietary Restrictions-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#e9dde7 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Dietary Restrictions
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/dietaryRestrictions.png" height="18" width="18" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "lacto" value="Lacto vegetarian" onclick="addDietFilter(this.id)">lacto vegetarian</button>
+        <button class="foodOptions" id = "ovo" value="Ovo vegetarian" onclick="addDietFilter(this.id)">ovo vegetarian</button>
+        <button class="foodOptions" id = "pesc" value="Pescetarian" onclick="addDietFilter(this.id)">pescatarian</button>
+        <button class="foodOptions" id = "vegan" value="Vegan" onclick="addDietFilter(this.id)">vegan</button>
+        <button class="foodOptions" id = "veg" value="Lacto-ovo vegetarian" onclick="addDietFilter(this.id)">vegetarian</button>
+        <div>&nbsp; &nbsp;*Limit 1</div>
+
+    </mat-expansion-panel>
+
+    <!--Cuisines-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#ffd7d3 [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Cuisines
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/cuisine.png" height="20" width="20" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "american" value="American" onclick = "addGenericFilter(this.id)">American</button>
+        <button class="foodOptions" id = "italian" value="Italian" onclick = "addGenericFilter(this.id)">Italian</button>
+        <button class="foodOptions" id = "asian" value="Asian" onclick = "addGenericFilter(this.id)">Asian</button>
+        <button class="foodOptions" id = "mexican" value="Mexican" onclick = "addGenericFilter(this.id)">Mexican</button>
+        <button class="foodOptions" id = "southern" value="Southern" onclick = "addGenericFilter(this.id)">Southern & Soul Food</button>
+        <button class="foodOptions" id = "french" value="French" onclick = "addGenericFilter(this.id)">French</button>
+        <button class="foodOptions" id = "southwestern" value="Southwestern" onclick = "addGenericFilter(this.id)">Southwestern</button>
+        <button class="foodOptions" id = "bbq" value="Barbecue-bbq" onclick = "addGenericFilter(this.id)">Barbecue</button>
+        <button class="foodOptions" id = "indian" value="Indian" onclick = "addGenericFilter(this.id)">Indian</button>
+        <button class="foodOptions" id = "chinese" value="Chinese" onclick = "addGenericFilter(this.id)">Chinese</button>
+        <button class="foodOptions" id = "cajun" value="Cajun" onclick = "addGenericFilter(this.id)">Cajun & Creole</button>
+        <button class="foodOptions" id = "english" value="English" onclick = "addGenericFilter(this.id)">English</button>
+        <button class="foodOptions" id = "mediterranean" value="Mediterranean" onclick = "addGenericFilter(this.id)">Mediterranean</button>
+        <button class="foodOptions" id = "greek" value="Greek" onclick = "addGenericFilter(this.id)">Greek</button>
+        <button class="foodOptions" id = "spanish" value="Spanish" onclick = "addGenericFilter(this.id)">Spanish</button>
+        <button class="foodOptions" id = "german" value="German" onclick = "addGenericFilter(this.id)">German</button>
+        <button class="foodOptions" id = "thai" value="Thai" onclick = "addGenericFilter(this.id)">Thai</button>
+        <button class="foodOptions" id = "moroccan" value="Moroccan" onclick = "addGenericFilter(this.id)">Moroccan</button>
+        <button class="foodOptions" id = "irish" value="Irish" onclick = "addGenericFilter(this.id)">Irish</button>
+        <button class="foodOptions" id = "japanese" value="Japanese" onclick = "addGenericFilter(this.id)">Japanese</button>
+        <button class="foodOptions" id = "cuban" value="Cuban" onclick = "addGenericFilter(this.id)">Cuban</button>
+        <button class="foodOptions" id = "hawaiin" value="Hawaiian" onclick = "addGenericFilter(this.id)">Hawaiin</button>
+        <button class="foodOptions" id = "sweedish" value="Swedish" onclick = "addGenericFilter(this.id)">Swedish</button>
+        <button class="foodOptions" id = "hungarian" value="Hungarian" onclick = "addGenericFilter(this.id)">Hungarian</button>
+        <button class="foodOptions" id = "portugese" value="Portugese" onclick = "addGenericFilter(this.id)">Portugese</button>
+
+    </mat-expansion-panel>
+
+    <!--Course-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#ffe1cc [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Course
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/course.png" height="20" width="20" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "main" value="Main Dishes" onclick = "addGenericFilter(this.id)">Main Dishes</button>
+        <button class="foodOptions" id = "dessert" value="Desserts" onclick = "addGenericFilter(this.id)">Desserts</button>
+        <button class="foodOptions" id = "sideDish" value="Side Dishes" onclick = "addGenericFilter(this.id)">Side Dishes</button>
+        <button class="foodOptions" id = "lunchAndSnack" value="Lunch and Snacks" onclick = "addGenericFilter(this.id)">Lunch and Snacks</button>
+        <button class="foodOptions" id = "appetizer" value="Appetizers" onclick = "addGenericFilter(this.id)">Appetizers</button>
+        <button class="foodOptions" id = "salad" value="Salads" onclick = "addGenericFilter(this.id)">Salads</button>
+        <button class="foodOptions" id = "bread" value="Breads" onclick = "addGenericFilter(this.id)">Breads</button>
+        <button class="foodOptions" id = "breakfast" value="Breakfast and Brunch" onclick = "addGenericFilter(this.id)">Breakfast and Brunch</button>
+        <button class="foodOptions" id = "soup" value="Soups" onclick = "addGenericFilter(this.id)">Soups</button>
+        <button class="foodOptions" id = "beverage" value="Beverages" onclick = "addGenericFilter(this.id)">Beverages</button>
+        <button class="foodOptions" id = "condiment" value="Condiments and Sauces" onclick = "addGenericFilter(this.id)">Condiments and Sauces</button>
+        <button class="foodOptions" id = "cocktail" value="Cocktails" onclick = "addGenericFilter(this.id)">Cocktails</button>
+
+    </mat-expansion-panel>
+
+    <!--Prep + Cook Time-->
+    <mat-expansion-panel class="accordion" [hideToggle]="true">
+
+        <mat-expansion-panel-header style=background:#f6eecc [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+            <mat-panel-title>
+                Prep + Cook time
+            </mat-panel-title>
+            <mat-icon>
+                <img src="assets/time.png" height="20" width="20" hspace="3" align="right">
+            </mat-icon>
+        </mat-expansion-panel-header>
+
+        <button class="foodOptions" id = "30mins" value="max of 30 minutes" onclick="addTimeFilter(this.id)">max of 30 mins.</button>
+        <button class="foodOptions" id = "1hr" value="max of 1 hour" onclick="addTimeFilter(this.id)">max of 1 hour</button>
+        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" onclick="addTimeFilter(this.id)">max of 1.5 hours</button>
+        <button class="foodOptions" id = "2hr" value="max of 2 hours" onclick="addTimeFilter(this.id)">max of 2 hours</button>
+        <div>&nbsp; &nbsp;*Limit 1</div>
+
+    </mat-expansion-panel>
     <!--filtering selection -->
     <!--<button class="accordion" style = background:#D1DEB3 >Protein<img src = "assets/meat.png" height="20" width="20" hspace="3" align= "right"></button>-->
     <!--<div class="panel">-->
