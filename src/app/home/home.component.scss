@@ -164,6 +164,16 @@ body {
     visibility: visible;
   }
 
+  .validationError {
+    font-family: "Dosis", cursive, sans-serif;
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+
   /*---------- filtersOn textbox ----------*/
   .filtersOn {
     margin:5%;

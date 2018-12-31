@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
             'ingredientName': new FormControl(this.ingredient, [
                 Validators.required,
                 Validators.minLength(3),
-                Validators.pattern(/^[a-zA-Z\s-]*$/)
+                Validators.pattern(/^[^-\s][a-zA-Z\s-]*$/)
             ]),
         });
     }
@@ -29,14 +29,8 @@ export class HomeComponent implements OnInit {
 
 
 
-    addToCheckBox(input: string) {
-        console.log('Ingredient: ' + input);
-    }
-    submit() {
-        console.log('submitC');
-    }
-
-    processSearchInput(ingredient: string) {
+    addToCheckBox(ingredient) {
+        console.log('Ingredient: ' + ingredient);
     }
 }
 

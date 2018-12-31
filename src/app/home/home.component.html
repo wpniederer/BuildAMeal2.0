@@ -35,7 +35,6 @@
 
     <!-- Search bar -->
     <form [formGroup]="ingredientForm" #formDir="ngForm">
-
         <div class="form-group">
 
             <button class="add" id = "add" style="float: right" [disabled]="!ingredientForm.valid" (click)="addToCheckBox(myInput.value)"><span> Add </span></button>
@@ -48,20 +47,19 @@
                        spellcheck="true" style="width: 97%">
             </div>
 
-            <div *ngIf="ingredientName.invalid && (ingredientName.dirty || ingredientName.touched)" class="alert alert-danger">
-                <div *ngIf="ingredientName.errors.required">
+            <div *ngIf="ingredientName.invalid && (ingredientName.dirty || ingredientName.touched)" style="text-align: center">
+                <div class="validationError" *ngIf="ingredientName.errors.required">
                     An ingredient is required.
                 </div>
-                <div *ngIf="ingredientName.errors.minlength">
+                <div class="validationError" *ngIf="ingredientName.errors.minlength">
                     Ingredient name must be at least 3 characters long.
                 </div>
-                <div *ngIf="ingredientName.errors.pattern">
+                <div class="validationError" *ngIf="ingredientName.errors.pattern">
                     Not a valid ingredient.
                 </div>
             </div>
 
         </div>
-
     </form>
 
 
