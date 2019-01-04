@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 export class HomeComponent implements OnInit {
     ingredient = '';
-    private ingredientList = [];
+    ingredientList = [];
 
     ingredientForm: FormGroup;
 
@@ -30,7 +30,13 @@ export class HomeComponent implements OnInit {
 
 
     addToCheckBox(ingredient) {
-        console.log('Ingredient: ' + ingredient);
+        // console.log('Ingredient: ' + ingredient);
+        this.ingredientList.push(ingredient);
+    }
+
+    removeIngredient(ingredient) {
+        const index = this.ingredientList.indexOf(ingredient);
+        this.ingredientList.splice(index, 1);
     }
 }
 

@@ -15,6 +15,9 @@
         <fieldset class="group">
             <legend>Ingredients List</legend>
             <ul class="checkbox" id="ingredientCheckbox">
+                <li *ngFor="let ingredientName of ingredientList" (click)="removeIngredient(ingredientName)">
+                    {{ingredientName}}
+                </li>
             </ul>
             <div style="text-align:center; font-size:14px; padding: 10px;">
                 <span style="color: grey; "><b> &#9432; Select items to remove OR </b></span>
@@ -37,7 +40,7 @@
     <form [formGroup]="ingredientForm" #formDir="ngForm">
         <div class="form-group">
 
-            <button class="add" id = "add" style="float: right" [disabled]="!ingredientForm.valid" (click)="addToCheckBox(myInput.value)"><span> Add </span></button>
+            <button class="add" id = "add" style="float: right" [disabled]="!ingredientForm.valid" (click)="addToCheckBox(myInput.value); ingredientForm.reset()"><span> Add </span></button>
             <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply
                 choose ingredients from the preloaded lists below and click to add to the ingredients list,
                 or search for a total of 10 ingredients. </span></span></span>
