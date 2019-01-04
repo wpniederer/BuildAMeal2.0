@@ -38,5 +38,13 @@ export class HomeComponent implements OnInit {
         const index = this.ingredientList.indexOf(ingredient);
         this.ingredientList.splice(index, 1);
     }
+
+    addIngredientToggle(event) {
+        const target = event.target || event.srcElement || event.currentTarget;
+        const idAttr = target.attributes.id;
+        const value = idAttr.nodeValue;
+
+        this.addToCheckBox(value);
+    }
 }
 

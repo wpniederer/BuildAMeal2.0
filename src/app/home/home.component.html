@@ -78,16 +78,16 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "beef" value="beef" onclick="addIngredient(this.id)">beef</button>
-        <button class="foodOptions" id = "chicken" value="chicken" onclick="addIngredient(this.id)">chicken</button>
-        <button class="foodOptions" id = "pork" value="pork" onclick="addIngredient(this.id)">pork</button>
-        <button class="foodOptions" id = "shrimp" value="shrimp" onclick="addIngredient(this.id)">shrimp</button>
-        <button class="foodOptions" id = "lamb" value="lamb" onclick="addIngredient(this.id)">lamb</button>
-        <button class="foodOptions" id = "salmon" value="salmon" onclick="addIngredient(this.id)">salmon</button>
-        <button class="foodOptions" id = "oyster" value="oyster" onclick="addIngredient(this.id)">oyster</button>
-        <button class="foodOptions" id = "clam" value="clam" onclick="addIngredient(this.id)">clam</button>
-        <button class="foodOptions" id = "lobster" value="lobster" onclick="addIngredient(this.id)">lobster</button>
-        <button class="foodOptions" id = "crab" value="crab" onclick="addIngredient(this.id)">crab</button>
+        <button class="foodOptions" id = "beef" value="beef" (click)="addIngredientToggle($event)">beef</button>
+        <button class="foodOptions" id = "chicken" value="chicken" (click)="addIngredientToggle($event)">chicken</button>
+        <button class="foodOptions" id = "pork" value="pork" (click)="addIngredientToggle($event)">pork</button>
+        <button class="foodOptions" id = "shrimp" value="shrimp" (click)="addIngredientToggle($event)">shrimp</button>
+        <button class="foodOptions" id = "lamb" value="lamb" (click)="addIngredientToggle($event)">lamb</button>
+        <button class="foodOptions" id = "salmon" value="salmon" (click)="addIngredientToggle($event)">salmon</button>
+        <button class="foodOptions" id = "oyster" value="oyster" (click)="addIngredientToggle($event)">oyster</button>
+        <button class="foodOptions" id = "clam" value="clam" (click)="addIngredientToggle($event)">clam</button>
+        <button class="foodOptions" id = "lobster" value="lobster" (click)="addIngredientToggle($event)">lobster</button>
+        <button class="foodOptions" id = "crab" value="crab" (click)="addIngredientToggle($event)">crab</button>
     </mat-expansion-panel>
 
     <!--vegetable selection-->
@@ -102,24 +102,24 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-         <button class="foodOptions" id = "potato" value="potato" onclick="addIngredient(this.id)">potato</button>
-         <button class="foodOptions" id = "tomato" value="tomato" onclick="addIngredient(this.id)">tomato</button>
-         <button class="foodOptions" id = "onion" value="onion" onclick="addIngredient(this.id)">onion</button>
-         <button class="foodOptions" id = "carrot" value="carrot" onclick="addIngredient(this.id)">carrot</button>
-         <button class="foodOptions" id = "lettuce" value="lettuce" onclick="addIngredient(this.id)">lettuce</button>
-         <button class="foodOptions" id = "broccoli" value="broccoli" onclick="addIngredient(this.id)">broccoli</button>
-         <button class="foodOptions" id = "green bell pepper" value="green bell pepper" onclick="addIngredient(this.id)">green bell pepper</button>
-         <button class="foodOptions" id = "red bell pepper" value="red bell pepper" onclick="addIngredient(this.id)">red bell pepper</button>
-         <button class="foodOptions" id = "yellow bell pepper" value="yellow bell pepper" onclick="addIngredient(this.id)">yellow bell pepper</button>
-         <button class="foodOptions" id = "celery" value="celery" onclick="addIngredient(this.id)">celery</button>
-         <button class="foodOptions" id = "cucumber" value="cucumber" onclick="addIngredient(this.id)">cucumber</button>
-         <button class="foodOptions" id = "corn" value="corn" onclick="addIngredient(this.id)">corn</button>
-         <button class="foodOptions" id = "garlic" value="garlic" onclick="addIngredient(this.id)">garlic</button>
-         <button class="foodOptions" id = "spinach" value="spinach" onclick="addIngredient(this.id)">spinach</button>
-         <button class="foodOptions" id = "mushroom" value="mushroom" onclick="addIngredient(this.id)">mushroom</button>
-         <button class="foodOptions" id = "zucchini" value="zucchini" onclick="addIngredient(this.id)">zucchini</button>
-         <button class="foodOptions" id = "kale" value="kale" onclick="addIngredient(this.id)">kale</button>
-         <button class="foodOptions" id = "brussel" value="brussel sprouts" onclick="addIngredient(this.id)">brussel sprouts</button>
+         <button class="foodOptions" id = "potato" value="potato" (click)="addIngredientToggle($event)">potato</button>
+         <button class="foodOptions" id = "tomato" value="tomato" (click)="addIngredientToggle($event)">tomato</button>
+         <button class="foodOptions" id = "onion" value="onion" (click)="addIngredientToggle($event)">onion</button>
+         <button class="foodOptions" id = "carrot" value="carrot" (click)="addIngredientToggle($event)">carrot</button>
+         <button class="foodOptions" id = "lettuce" value="lettuce" (click)="addIngredientToggle($event)">lettuce</button>
+         <button class="foodOptions" id = "broccoli" value="broccoli" (click)="addIngredientToggle($event)">broccoli</button>
+         <button class="foodOptions" id = "green bell pepper" value="green bell pepper" (click)="addIngredientToggle($event)">green bell pepper</button>
+         <button class="foodOptions" id = "red bell pepper" value="red bell pepper" (click)="addIngredientToggle($event)">red bell pepper</button>
+         <button class="foodOptions" id = "yellow bell pepper" value="yellow bell pepper" (click)="addIngredientToggle($event)">yellow bell pepper</button>
+         <button class="foodOptions" id = "celery" value="celery" (click)="addIngredientToggle($event)">celery</button>
+         <button class="foodOptions" id = "cucumber" value="cucumber" (click)="addIngredientToggle($event)">cucumber</button>
+         <button class="foodOptions" id = "corn" value="corn" (click)="addIngredientToggle($event)">corn</button>
+         <button class="foodOptions" id = "garlic" value="garlic" (click)="addIngredientToggle($event)">garlic</button>
+         <button class="foodOptions" id = "spinach" value="spinach" (click)="addIngredientToggle($event)">spinach</button>
+         <button class="foodOptions" id = "mushroom" value="mushroom" (click)="addIngredientToggle($event)">mushroom</button>
+         <button class="foodOptions" id = "zucchini" value="zucchini" (click)="addIngredientToggle($event)">zucchini</button>
+         <button class="foodOptions" id = "kale" value="kale" (click)="addIngredientToggle($event)">kale</button>
+         <button class="foodOptions" id = "brussels sprouts" value="brussels sprouts" (click)="addIngredientToggle($event)">brussel sprouts</button>
 
     </mat-expansion-panel>
 
@@ -136,18 +136,18 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "banana" value="banana" onclick="addIngredient(this.id)">banana</button>
-        <button class="foodOptions" id = "apple" value="apple" onclick="addIngredient(this.id)">apple</button>
-        <button class="foodOptions" id = "grape" value="grapes" onclick="addIngredient(this.id)">grapes</button>
-        <button class="foodOptions" id = "strawberry" value="strawberry" onclick="addIngredient(this.id)">strawberry</button>
-        <button class="foodOptions" id = "orange" value="orange" onclick="addIngredient(this.id)">orange</button>
-        <button class="foodOptions" id = "watermelon" value="watermelon" onclick="addIngredient(this.id)">watermelon</button>
-        <button class="foodOptions" id = "blueberry" value="blueberry" onclick="addIngredient(this.id)">blueberry</button>
-        <button class="foodOptions" id = "peach" value="peach" onclick="addIngredient(this.id)">peach</button>
-        <button class="foodOptions" id = "cantaloupe" value="cantaloupe" onclick="addIngredient(this.id)">cantaloupe</button>
-        <button class="foodOptions" id = "avocado" value="avocado" onclick="addIngredient(this.id)">avocado</button>
-        <button class="foodOptions" id = "pineapple" value="pineapple" onclick="addIngredient(this.id)">pineapple</button>
-        <button class="foodOptions" id = "cherry" value="cherry" onclick="addIngredient(this.id)">cherry</button>
+        <button class="foodOptions" id = "banana" value="banana" (click)="addIngredientToggle($event)">banana</button>
+        <button class="foodOptions" id = "apple" value="apple" (click)="addIngredientToggle($event)">apple</button>
+        <button class="foodOptions" id = "grape" value="grapes" (click)="addIngredientToggle($event)">grapes</button>
+        <button class="foodOptions" id = "strawberry" value="strawberry" (click)="addIngredientToggle($event)">strawberry</button>
+        <button class="foodOptions" id = "orange" value="orange" (click)="addIngredientToggle($event)">orange</button>
+        <button class="foodOptions" id = "watermelon" value="watermelon" (click)="addIngredientToggle($event)">watermelon</button>
+        <button class="foodOptions" id = "blueberry" value="blueberry" (click)="addIngredientToggle($event)">blueberry</button>
+        <button class="foodOptions" id = "peach" value="peach" (click)="addIngredientToggle($event)">peach</button>
+        <button class="foodOptions" id = "cantaloupe" value="cantaloupe" (click)="addIngredientToggle($event)">cantaloupe</button>
+        <button class="foodOptions" id = "avocado" value="avocado" (click)="addIngredientToggle($event)">avocado</button>
+        <button class="foodOptions" id = "pineapple" value="pineapple" (click)="addIngredientToggle($event)">pineapple</button>
+        <button class="foodOptions" id = "cherry" value="cherry" (click)="addIngredientToggle($event)">cherry</button>
 
     </mat-expansion-panel>
 
@@ -163,13 +163,13 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "butter" value="butter" onclick="addIngredient(this.id)">butter</button>
-        <button class="foodOptions" id = "evaporated milk" value="evaporated milk" onclick="addIngredient(this.id)">evaporated milk</button>
-        <button class="foodOptions" id = "milk" value="milk" onclick="addIngredient(this.id)">milk</button>
-        <button class="foodOptions" id = "sour cream" value="sour cream" onclick="addIngredient(this.id)">sour cream</button>
-        <button class="foodOptions" id = "feta" value="feta" onclick="addIngredient(this.id)">feta</button>
-        <button class="foodOptions" id = "cheddar cheese" value="cheddar cheese" onclick="addIngredient(this.id)">cheddar cheese</button>
-        <button class="foodOptions" id = "cream cheese" value="cream cheese" onclick="addIngredient(this.id)">cream cheese</button>
+        <button class="foodOptions" id = "butter" value="butter" (click)="addIngredientToggle($event)">butter</button>
+        <button class="foodOptions" id = "evaporated milk" value="evaporated milk" (click)="addIngredientToggle($event)">evaporated milk</button>
+        <button class="foodOptions" id = "milk" value="milk" (click)="addIngredientToggle($event)">milk</button>
+        <button class="foodOptions" id = "sour cream" value="sour cream" (click)="addIngredientToggle($event)">sour cream</button>
+        <button class="foodOptions" id = "feta" value="feta" (click)="addIngredientToggle($event)">feta</button>
+        <button class="foodOptions" id = "cheddar cheese" value="cheddar cheese" (click)="addIngredientToggle($event)">cheddar cheese</button>
+        <button class="foodOptions" id = "cream cheese" value="cream cheese" (click)="addIngredientToggle($event)">cream cheese</button>
 
     </mat-expansion-panel>
 
@@ -186,25 +186,25 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "allspice" value="allspice" onclick="addIngredient(this.id)">allspice</button>
-        <button class="foodOptions" id = "bayleaf" value="bay leaf" onclick="addIngredient(this.id)">bay leaf</button>
-        <button class="foodOptions" id = "basil" value="basil" onclick="addIngredient(this.id)">basil</button>
-        <button class="foodOptions" id = "cardamom" value="cardamom" onclick="addIngredient(this.id)">cardamom</button>
-        <button class="foodOptions" id = "cayenne" value="cayenne pepper" onclick="addIngredient(this.id)">cayenne pepper</button>
-        <button class="foodOptions" id = "cilantro" value="cilantro" onclick="addIngredient(this.id)">cilantro</button>
-        <button class="foodOptions" id = "cinnamon" value="cinnamon" onclick="addIngredient(this.id)">cinnamon</button>
-        <button class="foodOptions" id = "cloves" value="cloves" onclick="addIngredient(this.id)">cloves</button>
-        <button class="foodOptions" id = "coriander" value="coriander seed" onclick="addIngredient(this.id)">coriander seed</button>
-        <button class="foodOptions" id = "cumin" value="cumin" onclick="addIngredient(this.id)">cumin</button>
-        <button class="foodOptions" id = "fennel" value="fennel seed" onclick="addIngredient(this.id)">fennel seed</button>
-        <button class="foodOptions" id = "mint" value="mint" onclick="addIngredient(this.id)">mint</button>
-        <button class="foodOptions" id = "nutmeg" value="nutmeg" onclick="addIngredient(this.id)">nutmeg</button>
-        <button class="foodOptions" id = "oregano" value="oregano" onclick="addIngredient(this.id)">oregano</button>
-        <button class="foodOptions" id = "rosemary" value="rosemary" onclick="addIngredient(this.id)">rosemary</button>
-        <button class="foodOptions" id = "sage" value="sage" onclick="addIngredient(this.id)">sage</button>
-        <button class="foodOptions" id = "paprika" value="paprika" onclick="addIngredient(this.id)">paprika</button>
-        <button class="foodOptions" id = "tumeric" value="tumeric" onclick="addIngredient(this.id)">tumeric</button>
-        <button class="foodOptions" id = "thyme" value="thyme" onclick="addIngredient(this.id)">thyme</button>
+        <button class="foodOptions" id = "allspice" value="allspice" (click)="addIngredientToggle($event)">allspice</button>
+        <button class="foodOptions" id = "bay leaf" value="bay leaf" (click)="addIngredientToggle($event)">bay leaf</button>
+        <button class="foodOptions" id = "basil" value="basil" (click)="addIngredientToggle($event)">basil</button>
+        <button class="foodOptions" id = "cardamom" value="cardamom" (click)="addIngredientToggle($event)">cardamom</button>
+        <button class="foodOptions" id = "cayenne" value="cayenne pepper" (click)="addIngredientToggle($event)">cayenne pepper</button>
+        <button class="foodOptions" id = "cilantro" value="cilantro" (click)="addIngredientToggle($event)">cilantro</button>
+        <button class="foodOptions" id = "cinnamon" value="cinnamon" (click)="addIngredientToggle($event)">cinnamon</button>
+        <button class="foodOptions" id = "cloves" value="cloves" (click)="addIngredientToggle($event)">cloves</button>
+        <button class="foodOptions" id = "coriander" value="coriander seed" (click)="addIngredientToggle($event)">coriander seed</button>
+        <button class="foodOptions" id = "cumin" value="cumin" (click)="addIngredientToggle($event)">cumin</button>
+        <button class="foodOptions" id = "fennel" value="fennel seed" (click)="addIngredientToggle($event)">fennel seed</button>
+        <button class="foodOptions" id = "mint" value="mint" (click)="addIngredientToggle($event)">mint</button>
+        <button class="foodOptions" id = "nutmeg" value="nutmeg" (click)="addIngredientToggle($event)">nutmeg</button>
+        <button class="foodOptions" id = "oregano" value="oregano" (click)="addIngredientToggle($event)">oregano</button>
+        <button class="foodOptions" id = "rosemary" value="rosemary" (click)="addIngredientToggle($event)">rosemary</button>
+        <button class="foodOptions" id = "sage" value="sage" (click)="addIngredientToggle($event)">sage</button>
+        <button class="foodOptions" id = "paprika" value="paprika" (click)="addIngredientToggle($event)">paprika</button>
+        <button class="foodOptions" id = "turmeric" value="turmeric" (click)="addIngredientToggle($event)">tumeric</button>
+        <button class="foodOptions" id = "thyme" value="thyme" (click)="addIngredientToggle($event)">thyme</button>
     </mat-expansion-panel>
 
     <div> &nbsp; </div>
@@ -221,16 +221,16 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "dairy" value="Dairy-Free" onclick="addGenericFilter(this.id)">dairy</button>
-        <button class="foodOptions" id = "egg" value="Egg-Free" onclick="addGenericFilter(this.id)">egg</button>
-        <button class="foodOptions" id = "gluten" value="Gluten-Free" onclick="addGenericFilter(this.id)">gluten</button>
-        <button class="foodOptions" id = "peanut" value="Peanut-Free" onclick="addGenericFilter(this.id)">peanut</button>
-        <button class="foodOptions" id = "seafood" value="Seafood-Free" onclick="addGenericFilter(this.id)">seafood</button>
-        <button class="foodOptions" id = "sesame" value="Sesame-Free" onclick="addGenericFilter(this.id)">sesame</button>
-        <button class="foodOptions" id = "soy" value="Soy-Free" onclick="addGenericFilter(this.id)">soy</button>
-        <button class="foodOptions" id = "sulfite" value="Sulfite-Free" onclick="addGenericFilter(this.id)">sulfite</button>
-        <button class="foodOptions" id = "treenut" value="Tree Nut-Free" onclick="addGenericFilter(this.id)">tree nut</button>
-        <button class="foodOptions" id = "wheat" value="Wheat-Free" onclick="addGenericFilter(this.id)">wheat</button>
+        <button class="foodOptions" id = "dairy" value="Dairy-Free" (click)="addGenericFilter(this.id)">dairy</button>
+        <button class="foodOptions" id = "egg" value="Egg-Free" (click)="addGenericFilter(this.id)">egg</button>
+        <button class="foodOptions" id = "gluten" value="Gluten-Free" (click)="addGenericFilter(this.id)">gluten</button>
+        <button class="foodOptions" id = "peanut" value="Peanut-Free" (click)="addGenericFilter(this.id)">peanut</button>
+        <button class="foodOptions" id = "seafood" value="Seafood-Free" (click)="addGenericFilter(this.id)">seafood</button>
+        <button class="foodOptions" id = "sesame" value="Sesame-Free" (click)="addGenericFilter(this.id)">sesame</button>
+        <button class="foodOptions" id = "soy" value="Soy-Free" (click)="addGenericFilter(this.id)">soy</button>
+        <button class="foodOptions" id = "sulfite" value="Sulfite-Free" (click)="addGenericFilter(this.id)">sulfite</button>
+        <button class="foodOptions" id = "treenut" value="Tree Nut-Free" (click)="addGenericFilter(this.id)">tree nut</button>
+        <button class="foodOptions" id = "wheat" value="Wheat-Free" (click)="addGenericFilter(this.id)">wheat</button>
     </mat-expansion-panel>
 
     <!--Dietary Restrictions-->
@@ -245,11 +245,11 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "lacto" value="Lacto vegetarian" onclick="addDietFilter(this.id)">lacto vegetarian</button>
-        <button class="foodOptions" id = "ovo" value="Ovo vegetarian" onclick="addDietFilter(this.id)">ovo vegetarian</button>
-        <button class="foodOptions" id = "pesc" value="Pescetarian" onclick="addDietFilter(this.id)">pescatarian</button>
-        <button class="foodOptions" id = "vegan" value="Vegan" onclick="addDietFilter(this.id)">vegan</button>
-        <button class="foodOptions" id = "veg" value="Lacto-ovo vegetarian" onclick="addDietFilter(this.id)">vegetarian</button>
+        <button class="foodOptions" id = "lacto" value="Lacto vegetarian" (click)="addDietFilter(this.id)">lacto vegetarian</button>
+        <button class="foodOptions" id = "ovo" value="Ovo vegetarian" (click)="addDietFilter(this.id)">ovo vegetarian</button>
+        <button class="foodOptions" id = "pesc" value="Pescetarian" (click)="addDietFilter(this.id)">pescatarian</button>
+        <button class="foodOptions" id = "vegan" value="Vegan" (click)="addDietFilter(this.id)">vegan</button>
+        <button class="foodOptions" id = "veg" value="Lacto-ovo vegetarian" (click)="addDietFilter(this.id)">vegetarian</button>
         <div>&nbsp; &nbsp;*Limit 1</div>
 
     </mat-expansion-panel>
@@ -266,31 +266,31 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "american" value="American" onclick = "addGenericFilter(this.id)">American</button>
-        <button class="foodOptions" id = "italian" value="Italian" onclick = "addGenericFilter(this.id)">Italian</button>
-        <button class="foodOptions" id = "asian" value="Asian" onclick = "addGenericFilter(this.id)">Asian</button>
-        <button class="foodOptions" id = "mexican" value="Mexican" onclick = "addGenericFilter(this.id)">Mexican</button>
-        <button class="foodOptions" id = "southern" value="Southern" onclick = "addGenericFilter(this.id)">Southern & Soul Food</button>
-        <button class="foodOptions" id = "french" value="French" onclick = "addGenericFilter(this.id)">French</button>
-        <button class="foodOptions" id = "southwestern" value="Southwestern" onclick = "addGenericFilter(this.id)">Southwestern</button>
-        <button class="foodOptions" id = "bbq" value="Barbecue-bbq" onclick = "addGenericFilter(this.id)">Barbecue</button>
-        <button class="foodOptions" id = "indian" value="Indian" onclick = "addGenericFilter(this.id)">Indian</button>
-        <button class="foodOptions" id = "chinese" value="Chinese" onclick = "addGenericFilter(this.id)">Chinese</button>
-        <button class="foodOptions" id = "cajun" value="Cajun" onclick = "addGenericFilter(this.id)">Cajun & Creole</button>
-        <button class="foodOptions" id = "english" value="English" onclick = "addGenericFilter(this.id)">English</button>
-        <button class="foodOptions" id = "mediterranean" value="Mediterranean" onclick = "addGenericFilter(this.id)">Mediterranean</button>
-        <button class="foodOptions" id = "greek" value="Greek" onclick = "addGenericFilter(this.id)">Greek</button>
-        <button class="foodOptions" id = "spanish" value="Spanish" onclick = "addGenericFilter(this.id)">Spanish</button>
-        <button class="foodOptions" id = "german" value="German" onclick = "addGenericFilter(this.id)">German</button>
-        <button class="foodOptions" id = "thai" value="Thai" onclick = "addGenericFilter(this.id)">Thai</button>
-        <button class="foodOptions" id = "moroccan" value="Moroccan" onclick = "addGenericFilter(this.id)">Moroccan</button>
-        <button class="foodOptions" id = "irish" value="Irish" onclick = "addGenericFilter(this.id)">Irish</button>
-        <button class="foodOptions" id = "japanese" value="Japanese" onclick = "addGenericFilter(this.id)">Japanese</button>
-        <button class="foodOptions" id = "cuban" value="Cuban" onclick = "addGenericFilter(this.id)">Cuban</button>
-        <button class="foodOptions" id = "hawaiin" value="Hawaiian" onclick = "addGenericFilter(this.id)">Hawaiin</button>
-        <button class="foodOptions" id = "sweedish" value="Swedish" onclick = "addGenericFilter(this.id)">Swedish</button>
-        <button class="foodOptions" id = "hungarian" value="Hungarian" onclick = "addGenericFilter(this.id)">Hungarian</button>
-        <button class="foodOptions" id = "portugese" value="Portugese" onclick = "addGenericFilter(this.id)">Portugese</button>
+        <button class="foodOptions" id = "american" value="American" (click) = "addGenericFilter(this.id)">American</button>
+        <button class="foodOptions" id = "italian" value="Italian" (click) = "addGenericFilter(this.id)">Italian</button>
+        <button class="foodOptions" id = "asian" value="Asian" (click) = "addGenericFilter(this.id)">Asian</button>
+        <button class="foodOptions" id = "mexican" value="Mexican" (click) = "addGenericFilter(this.id)">Mexican</button>
+        <button class="foodOptions" id = "southern" value="Southern" (click) = "addGenericFilter(this.id)">Southern & Soul Food</button>
+        <button class="foodOptions" id = "french" value="French" (click) = "addGenericFilter(this.id)">French</button>
+        <button class="foodOptions" id = "southwestern" value="Southwestern" (click) = "addGenericFilter(this.id)">Southwestern</button>
+        <button class="foodOptions" id = "bbq" value="Barbecue-bbq" (click) = "addGenericFilter(this.id)">Barbecue</button>
+        <button class="foodOptions" id = "indian" value="Indian" (click) = "addGenericFilter(this.id)">Indian</button>
+        <button class="foodOptions" id = "chinese" value="Chinese" (click) = "addGenericFilter(this.id)">Chinese</button>
+        <button class="foodOptions" id = "cajun" value="Cajun" (click) = "addGenericFilter(this.id)">Cajun & Creole</button>
+        <button class="foodOptions" id = "english" value="English" (click) = "addGenericFilter(this.id)">English</button>
+        <button class="foodOptions" id = "mediterranean" value="Mediterranean" (click) = "addGenericFilter(this.id)">Mediterranean</button>
+        <button class="foodOptions" id = "greek" value="Greek" (click) = "addGenericFilter(this.id)">Greek</button>
+        <button class="foodOptions" id = "spanish" value="Spanish" (click) = "addGenericFilter(this.id)">Spanish</button>
+        <button class="foodOptions" id = "german" value="German" (click) = "addGenericFilter(this.id)">German</button>
+        <button class="foodOptions" id = "thai" value="Thai" (click) = "addGenericFilter(this.id)">Thai</button>
+        <button class="foodOptions" id = "moroccan" value="Moroccan" (click) = "addGenericFilter(this.id)">Moroccan</button>
+        <button class="foodOptions" id = "irish" value="Irish" (click) = "addGenericFilter(this.id)">Irish</button>
+        <button class="foodOptions" id = "japanese" value="Japanese" (click) = "addGenericFilter(this.id)">Japanese</button>
+        <button class="foodOptions" id = "cuban" value="Cuban" (click) = "addGenericFilter(this.id)">Cuban</button>
+        <button class="foodOptions" id = "hawaiin" value="Hawaiian" (click) = "addGenericFilter(this.id)">Hawaiin</button>
+        <button class="foodOptions" id = "sweedish" value="Swedish" (click) = "addGenericFilter(this.id)">Swedish</button>
+        <button class="foodOptions" id = "hungarian" value="Hungarian" (click) = "addGenericFilter(this.id)">Hungarian</button>
+        <button class="foodOptions" id = "portugese" value="Portugese" (click) = "addGenericFilter(this.id)">Portugese</button>
 
     </mat-expansion-panel>
 
@@ -306,18 +306,18 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "main" value="Main Dishes" onclick = "addGenericFilter(this.id)">Main Dishes</button>
-        <button class="foodOptions" id = "dessert" value="Desserts" onclick = "addGenericFilter(this.id)">Desserts</button>
-        <button class="foodOptions" id = "sideDish" value="Side Dishes" onclick = "addGenericFilter(this.id)">Side Dishes</button>
-        <button class="foodOptions" id = "lunchAndSnack" value="Lunch and Snacks" onclick = "addGenericFilter(this.id)">Lunch and Snacks</button>
-        <button class="foodOptions" id = "appetizer" value="Appetizers" onclick = "addGenericFilter(this.id)">Appetizers</button>
-        <button class="foodOptions" id = "salad" value="Salads" onclick = "addGenericFilter(this.id)">Salads</button>
-        <button class="foodOptions" id = "bread" value="Breads" onclick = "addGenericFilter(this.id)">Breads</button>
-        <button class="foodOptions" id = "breakfast" value="Breakfast and Brunch" onclick = "addGenericFilter(this.id)">Breakfast and Brunch</button>
-        <button class="foodOptions" id = "soup" value="Soups" onclick = "addGenericFilter(this.id)">Soups</button>
-        <button class="foodOptions" id = "beverage" value="Beverages" onclick = "addGenericFilter(this.id)">Beverages</button>
-        <button class="foodOptions" id = "condiment" value="Condiments and Sauces" onclick = "addGenericFilter(this.id)">Condiments and Sauces</button>
-        <button class="foodOptions" id = "cocktail" value="Cocktails" onclick = "addGenericFilter(this.id)">Cocktails</button>
+        <button class="foodOptions" id = "main" value="Main Dishes" (click) = "addGenericFilter(this.id)">Main Dishes</button>
+        <button class="foodOptions" id = "dessert" value="Desserts" (click) = "addGenericFilter(this.id)">Desserts</button>
+        <button class="foodOptions" id = "sideDish" value="Side Dishes" (click) = "addGenericFilter(this.id)">Side Dishes</button>
+        <button class="foodOptions" id = "lunchAndSnack" value="Lunch and Snacks" (click) = "addGenericFilter(this.id)">Lunch and Snacks</button>
+        <button class="foodOptions" id = "appetizer" value="Appetizers" (click) = "addGenericFilter(this.id)">Appetizers</button>
+        <button class="foodOptions" id = "salad" value="Salads" (click) = "addGenericFilter(this.id)">Salads</button>
+        <button class="foodOptions" id = "bread" value="Breads" (click) = "addGenericFilter(this.id)">Breads</button>
+        <button class="foodOptions" id = "breakfast" value="Breakfast and Brunch" (click) = "addGenericFilter(this.id)">Breakfast and Brunch</button>
+        <button class="foodOptions" id = "soup" value="Soups" (click) = "addGenericFilter(this.id)">Soups</button>
+        <button class="foodOptions" id = "beverage" value="Beverages" (click) = "addGenericFilter(this.id)">Beverages</button>
+        <button class="foodOptions" id = "condiment" value="Condiments and Sauces" (click) = "addGenericFilter(this.id)">Condiments and Sauces</button>
+        <button class="foodOptions" id = "cocktail" value="Cocktails" (click) = "addGenericFilter(this.id)">Cocktails</button>
 
     </mat-expansion-panel>
 
@@ -333,10 +333,10 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "30mins" value="max of 30 minutes" onclick="addTimeFilter(this.id)">max of 30 mins.</button>
-        <button class="foodOptions" id = "1hr" value="max of 1 hour" onclick="addTimeFilter(this.id)">max of 1 hour</button>
-        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" onclick="addTimeFilter(this.id)">max of 1.5 hours</button>
-        <button class="foodOptions" id = "2hr" value="max of 2 hours" onclick="addTimeFilter(this.id)">max of 2 hours</button>
+        <button class="foodOptions" id = "30mins" value="max of 30 minutes" (click)="addTimeFilter(this.id)">max of 30 mins.</button>
+        <button class="foodOptions" id = "1hr" value="max of 1 hour" (click)="addTimeFilter(this.id)">max of 1 hour</button>
+        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" (click)="addTimeFilter(this.id)">max of 1.5 hours</button>
+        <button class="foodOptions" id = "2hr" value="max of 2 hours" (click)="addTimeFilter(this.id)">max of 2 hours</button>
         <div>&nbsp; &nbsp;*Limit 1</div>
 
     </mat-expansion-panel>
