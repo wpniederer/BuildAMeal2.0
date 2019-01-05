@@ -11,10 +11,12 @@ export class HomeComponent implements OnInit {
     ingredient = '';
     ingredientList = [];
     filtersMap = new Map();
-    dietaryMap = new Map([['lacto', '1'], ['ovo', '1'], ['pesc', '1'], ['vegan', '1'], ['latco-ovo', '1']]);
+    dietaryMap = new Map([['lacto', '1'], ['ovo', '1'], ['pesc', '1'], ['vegan', '1'], ['lacto-ovo', '1']]);
     timeMap = new Map([['30mins', '1'], ['1hr', '1'], ['1.5hr', '1'], ['2hr', '1']]);
     currentDietaryFilter = new Map();
     currentTimeFilter = new Map();
+    hasBeenTouchedDiet = false;
+    hasBeenTouchedTime = false;
 
     ingredientForm: FormGroup;
 
@@ -51,10 +53,38 @@ export class HomeComponent implements OnInit {
     }
 
     removeFilter(filter) {
-        // const index = this.filtersMap.indexOf(filter);
-        // this.filtersMap.splice(index, 1);
+        if (this.hasBeenTouchedDiet && this.currentDietaryFilter.has(filter)) {
+            // console.log('hasBeenTouchedDiet');
 
+            // console.log('before delete diet filter');
+            // this.printKeys(this.currentDietaryFilter);
+
+            this.currentDietaryFilter.delete(filter);
+
+            // console.log('after delete diet filter');
+            // this.printKeys(this.currentDietaryFilter);
+            this.hasBeenTouchedDiet = false;
+        }
+
+        if (this.hasBeenTouchedTime && this.currentTimeFilter.has(filter)) {
+            // console.log('hasBeenTouchedTime');
+
+            // console.log('before delete time filter');
+            // this.printKeys(this.currentTimeFilter);
+
+            this.currentTimeFilter.delete(filter);
+
+            // console.log('after delete time filter');
+            // this.printKeys(this.currentTimeFilter);
+
+            this.hasBeenTouchedTime = false;
+        }
+        // console.log('before delete filters: ');
+        // this.printKeys(this.filtersMap);
         this.filtersMap.delete(filter);
+        // console.log('after delete filters: ');
+        // this.printKeys(this.filtersMap);
+        // console.log('deleted: ' + filter);
     }
 
     addIngredientToggle(event) {
@@ -84,8 +114,9 @@ export class HomeComponent implements OnInit {
         if (this.dietaryMap.has(dietaryFilter)) {
             // console.log('dMap has value ' + dietaryFilter);
             if (this.currentDietaryFilter.size === 0) {
-                // console.log('value set');
+                // console.log('value set ' + dietaryFilter);
                 this.currentDietaryFilter.set(dietaryFilter, 1);
+                this.hasBeenTouchedDiet = true;
                 return false;
             } else {
                 // console.log('dietary error');
@@ -100,6 +131,7 @@ export class HomeComponent implements OnInit {
             if (this.currentTimeFilter.size === 0) {
                 // console.log('value set');
                 this.currentTimeFilter.set(timeFilter, 1);
+                this.hasBeenTouchedTime = true;
                 return false;
             } else {
                 // console.log('dietary error');
@@ -110,6 +142,13 @@ export class HomeComponent implements OnInit {
 
     getKeys(map) {
         return Array.from(map.keys());
+    }
+
+    printKeys(map) {
+        const printArray = this.getKeys(map);
+        for (let i = 0; i < printArray.length; i++) {
+            console.log(printArray[i]);
+        }
     }
 }
 
