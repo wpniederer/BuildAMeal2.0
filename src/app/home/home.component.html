@@ -31,6 +31,9 @@
         <div class = "filtersText">
             <b>Filters Applied:</b>
             <ul class = "checkbox" id = "filterSelection">
+                <li *ngFor="let filter of getKeys(filtersMap)" (click)="removeFilter(filter)">
+                    {{filter}}
+                </li>
             </ul>
             <button class = "removeButton" onclick="removeAllFilters()"> Clear All </button>
         </div>
@@ -221,16 +224,16 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "dairy" value="Dairy-Free" (click)="addGenericFilter(this.id)">dairy</button>
-        <button class="foodOptions" id = "egg" value="Egg-Free" (click)="addGenericFilter(this.id)">egg</button>
-        <button class="foodOptions" id = "gluten" value="Gluten-Free" (click)="addGenericFilter(this.id)">gluten</button>
-        <button class="foodOptions" id = "peanut" value="Peanut-Free" (click)="addGenericFilter(this.id)">peanut</button>
-        <button class="foodOptions" id = "seafood" value="Seafood-Free" (click)="addGenericFilter(this.id)">seafood</button>
-        <button class="foodOptions" id = "sesame" value="Sesame-Free" (click)="addGenericFilter(this.id)">sesame</button>
-        <button class="foodOptions" id = "soy" value="Soy-Free" (click)="addGenericFilter(this.id)">soy</button>
-        <button class="foodOptions" id = "sulfite" value="Sulfite-Free" (click)="addGenericFilter(this.id)">sulfite</button>
-        <button class="foodOptions" id = "treenut" value="Tree Nut-Free" (click)="addGenericFilter(this.id)">tree nut</button>
-        <button class="foodOptions" id = "wheat" value="Wheat-Free" (click)="addGenericFilter(this.id)">wheat</button>
+        <button class="foodOptions" id = "dairy" value="Dairy-Free" (click)="addFilterToggle($event)">dairy</button>
+        <button class="foodOptions" id = "egg" value="Egg-Free" (click)="addFilterToggle($event)">egg</button>
+        <button class="foodOptions" id = "gluten" value="Gluten-Free" (click)="addFilterToggle($event)">gluten</button>
+        <button class="foodOptions" id = "peanut" value="Peanut-Free" (click)="addFilterToggle($event)">peanut</button>
+        <button class="foodOptions" id = "seafood" value="Seafood-Free" (click)="addFilterToggle($event)">seafood</button>
+        <button class="foodOptions" id = "sesame" value="Sesame-Free" (click)="addFilterToggle($event)">sesame</button>
+        <button class="foodOptions" id = "soy" value="Soy-Free" (click)="addFilterToggle($event)">soy</button>
+        <button class="foodOptions" id = "sulfite" value="Sulfite-Free" (click)="addFilterToggle($event)">sulfite</button>
+        <button class="foodOptions" id = "treenut" value="Tree Nut-Free" (click)="addFilterToggle($event)">tree nut</button>
+        <button class="foodOptions" id = "wheat" value="Wheat-Free" (click)="addFilterToggle($event)">wheat</button>
     </mat-expansion-panel>
 
     <!--Dietary Restrictions-->
@@ -245,11 +248,11 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "lacto" value="Lacto vegetarian" (click)="addDietFilter(this.id)">lacto vegetarian</button>
-        <button class="foodOptions" id = "ovo" value="Ovo vegetarian" (click)="addDietFilter(this.id)">ovo vegetarian</button>
-        <button class="foodOptions" id = "pesc" value="Pescetarian" (click)="addDietFilter(this.id)">pescatarian</button>
-        <button class="foodOptions" id = "vegan" value="Vegan" (click)="addDietFilter(this.id)">vegan</button>
-        <button class="foodOptions" id = "veg" value="Lacto-ovo vegetarian" (click)="addDietFilter(this.id)">vegetarian</button>
+        <button class="foodOptions" id = "lacto" value="Lacto vegetarian" (click)="addFilterToggle($event)">lacto vegetarian</button>
+        <button class="foodOptions" id = "ovo" value="Ovo vegetarian" (click)="addFilterToggle($event)">ovo vegetarian</button>
+        <button class="foodOptions" id = "pesc" value="Pescetarian" (click)="addFilterToggle($event)">pescatarian</button>
+        <button class="foodOptions" id = "vegan" value="Vegan" (click)="addFilterToggle($event)">vegan</button>
+        <button class="foodOptions" id = "lacto-ovo" value="Lacto-ovo vegetarian" (click)="addFilterToggle($event)">vegetarian</button>
         <div>&nbsp; &nbsp;*Limit 1</div>
 
     </mat-expansion-panel>
@@ -266,31 +269,31 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "american" value="American" (click) = "addGenericFilter(this.id)">American</button>
-        <button class="foodOptions" id = "italian" value="Italian" (click) = "addGenericFilter(this.id)">Italian</button>
-        <button class="foodOptions" id = "asian" value="Asian" (click) = "addGenericFilter(this.id)">Asian</button>
-        <button class="foodOptions" id = "mexican" value="Mexican" (click) = "addGenericFilter(this.id)">Mexican</button>
-        <button class="foodOptions" id = "southern" value="Southern" (click) = "addGenericFilter(this.id)">Southern & Soul Food</button>
-        <button class="foodOptions" id = "french" value="French" (click) = "addGenericFilter(this.id)">French</button>
-        <button class="foodOptions" id = "southwestern" value="Southwestern" (click) = "addGenericFilter(this.id)">Southwestern</button>
-        <button class="foodOptions" id = "bbq" value="Barbecue-bbq" (click) = "addGenericFilter(this.id)">Barbecue</button>
-        <button class="foodOptions" id = "indian" value="Indian" (click) = "addGenericFilter(this.id)">Indian</button>
-        <button class="foodOptions" id = "chinese" value="Chinese" (click) = "addGenericFilter(this.id)">Chinese</button>
-        <button class="foodOptions" id = "cajun" value="Cajun" (click) = "addGenericFilter(this.id)">Cajun & Creole</button>
-        <button class="foodOptions" id = "english" value="English" (click) = "addGenericFilter(this.id)">English</button>
-        <button class="foodOptions" id = "mediterranean" value="Mediterranean" (click) = "addGenericFilter(this.id)">Mediterranean</button>
-        <button class="foodOptions" id = "greek" value="Greek" (click) = "addGenericFilter(this.id)">Greek</button>
-        <button class="foodOptions" id = "spanish" value="Spanish" (click) = "addGenericFilter(this.id)">Spanish</button>
-        <button class="foodOptions" id = "german" value="German" (click) = "addGenericFilter(this.id)">German</button>
-        <button class="foodOptions" id = "thai" value="Thai" (click) = "addGenericFilter(this.id)">Thai</button>
-        <button class="foodOptions" id = "moroccan" value="Moroccan" (click) = "addGenericFilter(this.id)">Moroccan</button>
-        <button class="foodOptions" id = "irish" value="Irish" (click) = "addGenericFilter(this.id)">Irish</button>
-        <button class="foodOptions" id = "japanese" value="Japanese" (click) = "addGenericFilter(this.id)">Japanese</button>
-        <button class="foodOptions" id = "cuban" value="Cuban" (click) = "addGenericFilter(this.id)">Cuban</button>
-        <button class="foodOptions" id = "hawaiin" value="Hawaiian" (click) = "addGenericFilter(this.id)">Hawaiin</button>
-        <button class="foodOptions" id = "sweedish" value="Swedish" (click) = "addGenericFilter(this.id)">Swedish</button>
-        <button class="foodOptions" id = "hungarian" value="Hungarian" (click) = "addGenericFilter(this.id)">Hungarian</button>
-        <button class="foodOptions" id = "portugese" value="Portugese" (click) = "addGenericFilter(this.id)">Portugese</button>
+        <button class="foodOptions" id = "american" value="American" (click) = "addFilterToggle($event)">American</button>
+        <button class="foodOptions" id = "italian" value="Italian" (click) = "addFilterToggle($event)">Italian</button>
+        <button class="foodOptions" id = "asian" value="Asian" (click) = "addFilterToggle($event)">Asian</button>
+        <button class="foodOptions" id = "mexican" value="Mexican" (click) = "addFilterToggle($event)">Mexican</button>
+        <button class="foodOptions" id = "southern" value="Southern" (click) = "addFilterToggle($event)">Southern & Soul Food</button>
+        <button class="foodOptions" id = "french" value="French" (click) = "addFilterToggle($event)">French</button>
+        <button class="foodOptions" id = "southwestern" value="Southwestern" (click) = "addFilterToggle($event)">Southwestern</button>
+        <button class="foodOptions" id = "bbq" value="Barbecue-bbq" (click) = "addFilterToggle($event)">Barbecue</button>
+        <button class="foodOptions" id = "indian" value="Indian" (click) = "addFilterToggle($event)">Indian</button>
+        <button class="foodOptions" id = "chinese" value="Chinese" (click) = "addFilterToggle($event)">Chinese</button>
+        <button class="foodOptions" id = "cajun" value="Cajun" (click) = "addFilterToggle($event)">Cajun & Creole</button>
+        <button class="foodOptions" id = "english" value="English" (click) = "addFilterToggle($event)">English</button>
+        <button class="foodOptions" id = "mediterranean" value="Mediterranean" (click) = "addFilterToggle($event)">Mediterranean</button>
+        <button class="foodOptions" id = "greek" value="Greek" (click) = "addFilterToggle($event)">Greek</button>
+        <button class="foodOptions" id = "spanish" value="Spanish" (click) = "addFilterToggle($event)">Spanish</button>
+        <button class="foodOptions" id = "german" value="German" (click) = "addFilterToggle($event)">German</button>
+        <button class="foodOptions" id = "thai" value="Thai" (click) = "addFilterToggle($event)">Thai</button>
+        <button class="foodOptions" id = "moroccan" value="Moroccan" (click) = "addFilterToggle($event)">Moroccan</button>
+        <button class="foodOptions" id = "irish" value="Irish" (click) = "addFilterToggle($event)">Irish</button>
+        <button class="foodOptions" id = "japanese" value="Japanese" (click) = "addFilterToggle($event)">Japanese</button>
+        <button class="foodOptions" id = "cuban" value="Cuban" (click) = "addFilterToggle($event)">Cuban</button>
+        <button class="foodOptions" id = "hawaiin" value="Hawaiian" (click) = "addFilterToggle($event)">Hawaiin</button>
+        <button class="foodOptions" id = "sweedish" value="Swedish" (click) = "addFilterToggle($event)">Swedish</button>
+        <button class="foodOptions" id = "hungarian" value="Hungarian" (click) = "addFilterToggle($event)">Hungarian</button>
+        <button class="foodOptions" id = "portugese" value="Portugese" (click) = "addFilterToggle($event)">Portugese</button>
 
     </mat-expansion-panel>
 
@@ -306,18 +309,18 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "main" value="Main Dishes" (click) = "addGenericFilter(this.id)">Main Dishes</button>
-        <button class="foodOptions" id = "dessert" value="Desserts" (click) = "addGenericFilter(this.id)">Desserts</button>
-        <button class="foodOptions" id = "sideDish" value="Side Dishes" (click) = "addGenericFilter(this.id)">Side Dishes</button>
-        <button class="foodOptions" id = "lunchAndSnack" value="Lunch and Snacks" (click) = "addGenericFilter(this.id)">Lunch and Snacks</button>
-        <button class="foodOptions" id = "appetizer" value="Appetizers" (click) = "addGenericFilter(this.id)">Appetizers</button>
-        <button class="foodOptions" id = "salad" value="Salads" (click) = "addGenericFilter(this.id)">Salads</button>
-        <button class="foodOptions" id = "bread" value="Breads" (click) = "addGenericFilter(this.id)">Breads</button>
-        <button class="foodOptions" id = "breakfast" value="Breakfast and Brunch" (click) = "addGenericFilter(this.id)">Breakfast and Brunch</button>
-        <button class="foodOptions" id = "soup" value="Soups" (click) = "addGenericFilter(this.id)">Soups</button>
-        <button class="foodOptions" id = "beverage" value="Beverages" (click) = "addGenericFilter(this.id)">Beverages</button>
-        <button class="foodOptions" id = "condiment" value="Condiments and Sauces" (click) = "addGenericFilter(this.id)">Condiments and Sauces</button>
-        <button class="foodOptions" id = "cocktail" value="Cocktails" (click) = "addGenericFilter(this.id)">Cocktails</button>
+        <button class="foodOptions" id = "main" value="Main Dishes" (click) = "addFilterToggle($event)">Main Dishes</button>
+        <button class="foodOptions" id = "dessert" value="Desserts" (click) = "addFilterToggle($event)">Desserts</button>
+        <button class="foodOptions" id = "sideDish" value="Side Dishes" (click) = "addFilterToggle($event)">Side Dishes</button>
+        <button class="foodOptions" id = "lunchAndSnack" value="Lunch and Snacks" (click) = "addFilterToggle($event)">Lunch and Snacks</button>
+        <button class="foodOptions" id = "appetizer" value="Appetizers" (click) = "addFilterToggle($event)">Appetizers</button>
+        <button class="foodOptions" id = "salad" value="Salads" (click) = "addFilterToggle($event)">Salads</button>
+        <button class="foodOptions" id = "bread" value="Breads" (click) = "addFilterToggle($event)">Breads</button>
+        <button class="foodOptions" id = "breakfast" value="Breakfast and Brunch" (click) = "addFilterToggle($event)">Breakfast and Brunch</button>
+        <button class="foodOptions" id = "soup" value="Soups" (click) = "addFilterToggle($event)">Soups</button>
+        <button class="foodOptions" id = "beverage" value="Beverages" (click) = "addFilterToggle($event)">Beverages</button>
+        <button class="foodOptions" id = "condiment" value="Condiments and Sauces" (click) = "addFilterToggle($event)">Condiments and Sauces</button>
+        <button class="foodOptions" id = "cocktail" value="Cocktails" (click) = "addFilterToggle($event)">Cocktails</button>
 
     </mat-expansion-panel>
 
