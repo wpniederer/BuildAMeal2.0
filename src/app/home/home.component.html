@@ -336,10 +336,10 @@
             </mat-icon>
         </mat-expansion-panel-header>
 
-        <button class="foodOptions" id = "30mins" value="max of 30 minutes" (click)="addTimeFilter(this.id)">max of 30 mins.</button>
-        <button class="foodOptions" id = "1hr" value="max of 1 hour" (click)="addTimeFilter(this.id)">max of 1 hour</button>
-        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" (click)="addTimeFilter(this.id)">max of 1.5 hours</button>
-        <button class="foodOptions" id = "2hr" value="max of 2 hours" (click)="addTimeFilter(this.id)">max of 2 hours</button>
+        <button class="foodOptions" id = "30mins" value="max of 30 minutes" (click)="addFilterToggle($event)">max of 30 mins.</button>
+        <button class="foodOptions" id = "1hr" value="max of 1 hour" (click)="addFilterToggle($event)">max of 1 hour</button>
+        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" (click)="addFilterToggle($event)">max of 1.5 hours</button>
+        <button class="foodOptions" id = "2hr" value="max of 2 hours" (click)="addFilterToggle($event)">max of 2 hours</button>
         <div>&nbsp; &nbsp;*Limit 1</div>
 
     </mat-expansion-panel>
