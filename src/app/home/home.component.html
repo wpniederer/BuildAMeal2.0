@@ -21,7 +21,7 @@
             </ul>
             <div style="text-align:center; font-size:14px; padding: 10px;">
                 <span style="color: grey; "><b> &#9432; Select items to remove OR </b></span>
-                <button class = "removeButton" onclick="removeAllIngredients()"> Clear All </button>
+                <button class = "removeButton" (click)="removeAllIngredients()"> Clear All </button>
             </div>
         </fieldset>
     </div>
@@ -35,7 +35,7 @@
                     {{filter}}
                 </li>
             </ul>
-            <button class = "removeButton" onclick="removeAllFilters()"> Clear All </button>
+            <button class = "removeButton" (click)="removeAllFilters()"> Clear All </button>
         </div>
     </div>
 

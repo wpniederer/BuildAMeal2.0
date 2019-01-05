@@ -150,5 +150,13 @@ export class HomeComponent implements OnInit {
             console.log(printArray[i]);
         }
     }
+
+    removeAllFilters() {
+        this.filtersMap.clear();
+    }
+
+    removeAllIngredients() {
+        this.ingredientList = [];
+    }
 }
 
