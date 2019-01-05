@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
     ingredient = '';
     ingredientList = [];
     filtersMap = new Map();
+    dietaryMap = new Map([['lacto', '1'], ['ovo', '1'], ['pesc', '1'], ['vegan', '1'], ['latco-ovo', '1']]);
+    timeMap = new Map([['30mins', '1'], ['1hr', '1'], ['1.5hr', '1'], ['2hr', '1']]);
+    currentDietaryFilter = new Map();
+    currentTimeFilter = new Map();
 
     ingredientForm: FormGroup;
 
@@ -66,10 +70,41 @@ export class HomeComponent implements OnInit {
         const idAttr = target.attributes.id;
         const value = idAttr.nodeValue;
 
-        if (!this.filtersMap.has(value)) {
+        if (!this.filtersMap.has(value) && !this.hasDietaryFilter(value) && !this.hasTimeFilter(value)) {
             this.addToFiltersBox(value);
         } else {
             alert('Cannot add more than one filter');
+        }
+
+
+        // an array with all the restricted
+    }
+
+    hasDietaryFilter(dietaryFilter) {
+        if (this.dietaryMap.has(dietaryFilter)) {
+            // console.log('dMap has value ' + dietaryFilter);
+            if (this.currentDietaryFilter.size === 0) {
+                // console.log('value set');
+                this.currentDietaryFilter.set(dietaryFilter, 1);
+                return false;
+            } else {
+                // console.log('dietary error');
+                return true;
+            }
+        }
+    }
+
+    hasTimeFilter(timeFilter) {
+        if (this.timeMap.has(timeFilter)) {
+            // console.log('dMap has value ' + dietaryFilter);
+            if (this.currentTimeFilter.size === 0) {
+                // console.log('value set');
+                this.currentTimeFilter.set(timeFilter, 1);
+                return false;
+            } else {
+                // console.log('dietary error');
+                return true;
+            }
         }
     }
 
