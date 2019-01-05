@@ -153,6 +153,8 @@ export class HomeComponent implements OnInit {
 
     removeAllFilters() {
         this.filtersMap.clear();
+        this.currentTimeFilter.clear();
+        this.currentDietaryFilter.clear();
     }
 
     removeAllIngredients() {
