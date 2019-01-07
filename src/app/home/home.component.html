@@ -349,4 +349,15 @@
     <!--</div>-->
 
 </div>
+
+<button (click)="scrollToTop()" id="upButton" title="Go to top">&#8593;</button>
+
+<div class="right" id = "rightID" onscroll="showTopButton()">
+    <div class = "bannerBackground">
+        <p id = "bannerIngredients" style="margin:5px;"><b> Showing results for: </b></p>
+        <p id = "bannerFilters" style="margin:5px;"><b> Filters applied: </b></p>
+
+    </div>
+    <div id = "finalRecipes"></div>
+</div>
 </body>

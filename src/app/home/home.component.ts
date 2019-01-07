@@ -105,9 +105,6 @@ export class HomeComponent implements OnInit {
         } else {
             alert('Cannot add more than one filter');
         }
-
-
-        // an array with all the restricted
     }
 
     hasDietaryFilter(dietaryFilter) {
